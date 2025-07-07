@@ -16,7 +16,7 @@ def get_wikipedia_image_url(title=None, pageid=None):
         return None
     response = requests.get('https://en.wikipedia.org/w/api.php', params=params)
     xml = response.text
-    # Parse XML to extract <original> tag's source attribute
+    #vins atgriez xml un es te pats noteikti uzrakstiju lai dabuu bildi
     import xml.etree.ElementTree as ET
     root = ET.fromstring(xml)
     orig = root.find('.//original')
